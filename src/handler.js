@@ -15,7 +15,7 @@ const addBookHandler = (request, h) => {
     reading,
   } = request.payload;
 
-  // CClient tidak melampirkan properti namepada request body
+  // Client tidak melampirkan properti name pada request body
   if (!name) {
     const response = h.response({
       status: 'fail',
@@ -59,7 +59,7 @@ const addBookHandler = (request, h) => {
 
   const isSuccess = books.filter((book) => book.id === id).length > 0;
 
-  // Respon server bila bbuku berhasil ditambahkan
+  // Respon server bila buku berhasil ditambahkan
   if (isSuccess) {
     const response = h.response({
       status: 'success',
